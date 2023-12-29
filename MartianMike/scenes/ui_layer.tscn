@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ftso11qichrd"]
+
+[ext_resource type="PackedScene" uid="uid://dmouv8iaycgcm" path="res://scenes/hud.tscn" id="1_im2pg"]
+[ext_resource type="Script" path="res://scripts/ui_layer.gd" id="1_n3088"]
+[ext_resource type="PackedScene" uid="uid://bhk6v5m357xql" path="res://scenes/win_screen.tscn" id="2_osld5"]
+
+[node name="UILayer" type="CanvasLayer"]
+script = ExtResource("1_n3088")
+
+[node name="HUD" parent="." instance=ExtResource("1_im2pg")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+grow_horizontal = 2
+
+[node name="WinScreen" parent="." instance=ExtResource("2_osld5")]
+visible = false
